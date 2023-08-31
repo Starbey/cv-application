@@ -2,14 +2,14 @@ import "../styles/Cv.css"
 import CvCategory from "./CvCategory.jsx"
 import CvPersonalInfo from "./CvPersonalInfo.jsx"
 
-function Cv(){
-
+function Cv({ cvInfo }){
+  console.log(cvInfo);
     return(
         <div className="cv-container">
         <CvPersonalInfo
-          name="Benjamin Gavieres"
-          email="benjamin.gavieres@gmail.com"
-          location="Toronto, ON" 
+          name={cvInfo.personalInfo.name}
+          email={cvInfo.personalInfo.email}
+          location={cvInfo.personalInfo.location}
         ></CvPersonalInfo>
           <CvCategory    
             headerText="Education"
