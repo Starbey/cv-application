@@ -1,0 +1,17 @@
+.menu-container{
+    height:500px;
+    min-width:400px;
+    max-width:500px;
+    border:2px solid #ff0000;
+    min-height:50%;
+    margin:3% 3% 3% 3%;
+}
+
+@media (max-width: 750px) {
+    .menu-container {
+      min-width:400px;
+      max-width:150px;
+      margin-right:2%;
+      margin-left:2%;
+    }
+}

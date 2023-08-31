@@ -1,0 +1,43 @@
+.cv-container{
+    min-width:500px;
+    max-width:800px;
+    border:2px solid #000000;
+    margin:3% 10% 0% 0%;
+    box-shadow: rgba(50, 50, 93, 0.1) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
+    background-color: rgba(207, 207, 207, 0.322);
+}
+
+.cv-personal-info{
+    padding:32px;
+    background-color:#2b222e9c;
+    text-align:center;
+    font-size:20px;
+}
+
+.cv-personal-info-name{
+    font-size:32px;
+}
+
+.cv-category{
+    padding:16px;
+}
+
+.cv-category-header{
+    padding:16px;
+    margin-bottom:16px;
+    text-align:center;
+    border-bottom:2px solid #000000
+}
+
+.cv-category-entry{
+    display:flex;
+    justify-content:space-between;
+}
+
+@media (max-width: 750px) {
+    .cv-container {
+      min-width:400px;
+      margin-right:3%;
+    }
+}
