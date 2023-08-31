@@ -1,16 +1,24 @@
-function CvCategory ({ headerText, subtitleText, desc, startDate, endDate, location })
+import uniqid from "uniqid";
+
+function CvCategory ({ headerText, entries })
 {
+    const entriesArray=[...entries];
+    const entriesComponents=entriesArray.map((entry)=>
+        <Entry 
+            key={uniqid()}
+            organization={entry.organization}
+            desc={entry.desc}
+            startDate={entry.startDate}
+            endDate={entry.endDate}
+            location={entry.location}
+        ></Entry> 
+    )
+
     return(
         <div className="cv-category">
             <Header text={headerText}>
             </Header>
-            <Entry 
-                subtitleText={subtitleText}
-                desc={desc}
-                startDate={startDate}
-                endDate={endDate}
-                location={location}
-            ></Entry> 
+            {entriesComponents}
          </div> 
     )
 }
@@ -23,11 +31,11 @@ function Header( {text} ) {
     )
 }
 
-function Entry({ subtitleText, desc, startDate, endDate, location }){
+function Entry({ organization, desc, startDate, endDate, location }){
     return (
       <div className="cv-category-entry">
         <div className="entry-left-aligned">
-            <div className="entry-header">{subtitleText}</div>
+            <div className="entry-header">{organization}</div>
             <div className="entry-desc">{desc}</div>
         </div>
         <div className="entry-right-aligned">

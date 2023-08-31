@@ -3,7 +3,6 @@ import CvCategory from "./CvCategory.jsx"
 import CvPersonalInfo from "./CvPersonalInfo.jsx"
 
 function Cv({ cvInfo }){
-  console.log(cvInfo);
     return(
         <div className="cv-container">
         <CvPersonalInfo
@@ -11,14 +10,14 @@ function Cv({ cvInfo }){
           email={cvInfo.personalInfo.email}
           location={cvInfo.personalInfo.location}
         ></CvPersonalInfo>
-          <CvCategory    
-            headerText="Education"
-            subtitleText="University of Waterloo"
-            desc="Bachelor of Applied Science"
-            startDate="09/2023"
-            endDate="06/2028"
-            location="Waterloo, ON"
-          ></CvCategory>
+        <CvCategory    
+          headerText="Education"
+          entries={cvInfo.educations}
+        ></CvCategory>
+        <CvCategory
+          headerText="Professional Experience"
+          entries={cvInfo.professionalExperiences}
+        ></CvCategory>
         </div>
     )
 }

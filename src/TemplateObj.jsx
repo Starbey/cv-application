@@ -8,18 +8,34 @@ function TemplateObj(){
             },
             educations:[
                 {
-                    school:"University of Waterloo",
+                    organization:"University of Waterloo",
                     desc:"Bachelor of Applied Science",
                     startDate:"09/2023",
                     endDate:"08/2028",
                     location:"Waterloo, ON"
                 },
                 {
-                    school:"School 2",
+                    organization:"School 2",
                     desc:"Bachelor of Rizz",
                     startDate:"09/2023",
                     endDate:"08/2028",
                     location:"Vancouver, BC"
+                }
+            ],
+            professionalExperiences:[
+                {
+                    organization:"Riot Games",
+                    desc:"Game Developer",
+                    startDate:"12/2029",
+                    endDate:"present",
+                    location:"Los Angeles, CA"
+                },
+                {
+                    organization:"Discord",
+                    desc:"Keyboard Warrior",
+                    startDate:"09/2005",
+                    endDate:"present",
+                    location:"Earth, Milky Way"
                 }
             ]
         }
