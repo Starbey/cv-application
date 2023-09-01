@@ -17,8 +17,8 @@ function TemplateObj(){
                 {
                     organization:"School 2",
                     desc:"Bachelor of Rizz",
-                    startDate:"09/2023",
-                    endDate:"08/2028",
+                    startDate:"09/2028",
+                    endDate:"06/2033",
                     location:"Vancouver, BC"
                 }
             ],

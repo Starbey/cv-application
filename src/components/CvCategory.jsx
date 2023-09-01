@@ -5,7 +5,7 @@ function CvCategory ({ headerText, entries })
     const entriesArray=[...entries];
     const entriesComponents=entriesArray.map((entry)=>
         <Entry 
-            key={uniqid()}
+            key={uniqid()}//NOT A PROP
             organization={entry.organization}
             desc={entry.desc}
             startDate={entry.startDate}
