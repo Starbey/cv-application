@@ -1,12 +1,12 @@
 import "../styles/Menu.css"
-import TemplateObj2 from "../TemplateObj2.jsx"
 
-function Menu({ handleSaveChanges }){
+function Menu({ handleSavePersonalInfo }){
     return(
         <div className="menu-container">
-            {/* <button
-                onClick={handleSaveChanges()}
-            >Save Changes</button> */}
+            <button
+                className="save-personal-info"
+                onClick={handleSavePersonalInfo}
+            >Save Personal Info</button>
         </div>
     )
 }

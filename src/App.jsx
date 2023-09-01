@@ -8,26 +8,31 @@ import "./styles/App.css"
 
 function App() {
   const [infoObj,setInfoObj]=useState(TemplateObj);
+  const [personalInfo,setPersonalInfo]=useState(infoObj.personalInfo);
   
   const handleSaveChanges=(e)=>{
     setInfoObj(TemplateObj2);
+  }
+
+  const handleSavePersonalInfo=(e)=>{
+    setPersonalInfo(TemplateObj2().personalInfo);
   }
 
   return (
     <>
       <div className="app">
         <Menu 
-          handleSaveChanges={handleSaveChanges}
-        ></Menu>
+          handleSavePersonalInfo={handleSavePersonalInfo}
+        >
+          hello
+        </Menu>
         
         <Cv 
-          cvInfo={infoObj}>
-        </Cv>
+          personalInfo={personalInfo}
+          educations={infoObj.educations}
+          professionalExperiences={infoObj.professionalExperiences}
+        ></Cv>
        </div>
-
-       <button
-          onClick={handleSaveChanges}
-       >Save Changes</button>
     </>
   )
 }

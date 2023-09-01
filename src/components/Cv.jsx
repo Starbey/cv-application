@@ -2,21 +2,21 @@ import "../styles/Cv.css"
 import CvCategory from "./CvCategory.jsx"
 import CvPersonalInfo from "./CvPersonalInfo.jsx"
 
-function Cv({ cvInfo }){
+function Cv({ personalInfo, educations, professionalExperiences }){
     return(
         <div className="cv-container">
         <CvPersonalInfo
-          name={cvInfo.personalInfo.name}
-          email={cvInfo.personalInfo.email}
-          location={cvInfo.personalInfo.location}
+          name={personalInfo.name}
+          email={personalInfo.email}
+          location={personalInfo.location}
         ></CvPersonalInfo>
         <CvCategory    
           headerText="Education"
-          entries={cvInfo.educations}
+          entries={educations}
         ></CvCategory>
         <CvCategory
           headerText="Professional Experience"
-          entries={cvInfo.professionalExperiences}
+          entries={professionalExperiences}
         ></CvCategory>
         </div>
     )
